@@ -13,8 +13,8 @@
               <td><%= link_to @book.title,book_path(id: @book.id)%></td>
               <td> <%= @book.body %></td>
               <% if @book.user== current_user %>
-                <td><button type="button" class="btn btn-success"><%= link_to "Edit" , edit_book_path , class: "text-light" %></button></td>
-                <td><button type="button" class="btn btn-danger"><%= link_to "destroy" , book_path(@book), method: :delete ,"data-confirm" =>"are you sure?",class: "delete-button text-light"%></button></td>
+                <td><%= link_to "Edit" , edit_book_path , class: "text-light btn btn-success" %></td>
+                <td><%= link_to "destroy" , book_path(@book), method: :delete ,"data-confirm" =>"are you sure?",class: "delete-button text-light btn btn-danger"%></td>
               <% end %>
             </tr>
           </thead>
