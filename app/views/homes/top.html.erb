@@ -1,0 +1,18 @@
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6 ">
+        <h1 class="mt-4 mb-3">welcome to <i class="fas fa-book" style="color: #000000;"></i> <strong>Bookers</strong> !!</h1>
+        <h5 class="mb-3">In <i class="fas fa-book" style="color: #000000;"></i> Bookers,</h5>
+        <p class="mb-3">you can share and exchange your opinions , inpressions , and emotions</p>
+        <P class="mb-4">about various books!</p>
+          <div class="row col-10 mx-auto">
+            <%= link_to "Log in" , new_user_session_path ,class: "text-light btn btn-info btn-sm btn-block mb-3 "%>
+          </div>
+          <div class="row col-10 mx-auto">
+            <%= link_to "Sign up" , new_user_registration_path ,class: "text-light btn btn-success btn-sm btn-block mb-3"%>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>
