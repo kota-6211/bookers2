@@ -31,7 +31,6 @@ class BooksController < ApplicationController
     @book.destroy  
     redirect_to books_path
   end
-
   def edit
     @book = Book.find_by(id: params[:id])
     @user = current_user

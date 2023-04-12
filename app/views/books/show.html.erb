@@ -8,12 +8,16 @@
        <table class="table table-hover table-inverse">
           <thead>
             <tr>
-              <td> <%= image_tag @book.user.get_profile_image(100,100) %></br><%= link_to @book.user.name , user_path(@book.user.id) %></td>
+              <td>
+                <%= link_to user_path(@book.user_id) do %>
+                  <%= image_tag @book.user.get_profile_image(100,100) %></br><%= @book.user.name %>
+                <% end %>
+              </td>
               <td><%= link_to @book.title,book_path(id: @book.id)%></td>
               <td> <%= @book.body %></td>
               <% if @book.user== current_user %>
-                <td><%= link_to "Edit" , edit_book_path , class: "text-light btn btn-success" %></td>
-                <td><%= link_to "destroy" , book_path(@book), method: :delete ,"data-confirm" =>"are you sure?",class: "delete-button text-light btn btn-danger"%></td>
+                <td><%= link_to "Edit" , edit_book_path , class: "text-light btn btn-success btn-sm" %></td>
+                <td><%= link_to "Destroy" , book_path(@book), method: :delete ,"data-confirm" =>"are you sure?",class: "delete-button text-light btn btn-danger btn"%></td>
               <% end %>
             </tr>
           </thead>

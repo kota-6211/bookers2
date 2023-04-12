@@ -21,6 +21,7 @@
                   <% end %>  
               </td>
               <td><%= link_to books.title, book_path(id: books.id) %></td>
+              <td><%= books.body %></td>
             </tr>
          <% end %>
        </table>

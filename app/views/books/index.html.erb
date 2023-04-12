@@ -25,16 +25,16 @@
               <th colspan="3"></th>
             </tr>
           </thead>
-        <% @books.each do |books| %>
+        <% @books.each do |book| %>
           <tbody>
             <tr>
               <td>
-              　<%= link_to user_path(books.user_id) do %>
-                  <%= image_tag books.user.get_profile_image(100,100) %>
+              　<%= link_to user_path(book.user_id) do %>
+                  <%= image_tag book.user.get_profile_image(100,100) %>
                 <% end %>
               </td>
-              <td><%= link_to books.title, book_path(id: books.id) %></td>
-              <td><%= books.body %></td>
+              <td><%= link_to book.title, book_path(id: book.id) %></td>
+              <td><%= book.body %></td>
             </tr>
          <% end %>
        </table>
