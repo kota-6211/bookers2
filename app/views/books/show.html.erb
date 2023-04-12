@@ -9,7 +9,6 @@
           <thead>
             <tr>
               <td> <%= image_tag @book.user.get_profile_image(100,100) %></br><%= link_to @book.user.name , user_path(@book.user.id) %></td>
-             
               <td><%= link_to @book.title,book_path(id: @book.id)%></td>
               <td> <%= @book.body %></td>
               <% if @book.user== current_user %>
